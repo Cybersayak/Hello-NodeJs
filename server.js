@@ -1,7 +1,9 @@
-const note = require('./demonotes')
+const express = require('express')
 
-let totalPages= note.notesSize
-console.log(totalPages);
+const app = express();
 
-let result = note.addNum(totalPages+5 ,5)
-console.log(`Result is  ${result}`);
+app.get('/', function (req,res){
+    res.send('EXPRESS JS Running')
+})
+
+app.listen(3000)   
